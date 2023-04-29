@@ -34,6 +34,9 @@ public class PageBase {
     }
 
     public void takeScreenshot() {
+//        //JUST A 1 SEC PAUSE BEFORE TAKE A SCREENSHOT, TO ALLOW PREVIOUS SCRIPT FINISH IT WORK
+//        new WebDriverWait(webBrowser(), Duration.ofSeconds(1)).until(ExpectedConditions.numberOfWindowsToBe(2));
+
         File srcFile = ((TakesScreenshot)webBrowser()).getScreenshotAs(OutputType.FILE);
 
         String fileName = new StringBuilder()

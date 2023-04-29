@@ -1,7 +1,6 @@
 package objects.pages.canvas;
 
 import objects.base.PageBase;
-import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;

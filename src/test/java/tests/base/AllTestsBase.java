@@ -11,20 +11,16 @@ import static common.WebBrowser.closeWebBrowser;
 
 public class AllTestsBase {
 
-    protected SoftAssert soft;
-
     @BeforeMethod
     protected void prepareDriver() {
         System.setProperty("webdriver.http.factory", "jdk-http-client");
         webBrowser().manage().window().maximize();
-        webBrowser().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-
-        soft = new SoftAssert();
+        webBrowser().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
 
 
-    @AfterMethod(alwaysRun = true)
+//    @AfterMethod(alwaysRun = true)
     protected void quitDriver() {
         closeWebBrowser();
     }

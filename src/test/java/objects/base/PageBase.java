@@ -14,6 +14,8 @@ import static common.WebBrowser.webBrowser;
 
 public class PageBase {
 
+    protected String initialTab = webBrowser().getWindowHandle();
+
     public void closePopUpWindow() {
         new WebDriverWait(webBrowser(), Duration.ofSeconds(5)).until(ExpectedConditions.numberOfWindowsToBe(2));
         webBrowser().switchTo().window(webBrowser().getWindowHandles().toArray()[1].toString());

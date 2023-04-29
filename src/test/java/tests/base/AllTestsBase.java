@@ -1,8 +1,7 @@
 package tests.base;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.asserts.SoftAssert;
+import org.testng.annotations.AfterMethod;
 
 import java.util.concurrent.TimeUnit;
 
@@ -20,7 +19,7 @@ public class AllTestsBase {
 
 
 
-//    @AfterMethod(alwaysRun = true)
+    @AfterMethod(alwaysRun = true)
     protected void quitDriver() {
         closeWebBrowser();
     }
